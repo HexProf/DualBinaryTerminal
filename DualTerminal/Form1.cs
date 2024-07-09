@@ -100,6 +100,12 @@ namespace DualTerminal
                 serialPort2.PortName = toolStripComboBoxPort2.Text;
                 serialPort1.BaudRate = Int32.Parse(toolStripComboBoxBaud.Text);
                 serialPort2.BaudRate = Int32.Parse(toolStripComboBoxBaud.Text);
+                serialPort1.DataBits = 8;
+                serialPort2.DataBits = 8;
+                serialPort1.Parity = Parity.Even;
+                serialPort2.Parity = Parity.Even;
+                serialPort1.StopBits = StopBits.Two;
+                serialPort2.StopBits = StopBits.Two;
                 serialPort1.Open();
                 serialPort2.Open();
                 openToolStripMenuItem.Enabled = false;
